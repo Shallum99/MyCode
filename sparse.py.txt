@@ -1,0 +1,85 @@
+Sparse Arrays Hackerrank
+
+There are N strings. Each string’s length is no more than 20 characters. There are also Q queries. For each query, you are given a string, and you need to find out how many times this string occurred previously.
+
+Input Format
+
+The first line contains N, the number of strings.
+The next N lines each contain a string.
+The N+2nd line contains Q, the number of queries.
+The following Q lines each contain a query string.
+
+Constraints
+
+
+1<=N<=1000 
+1<=Q<=1000 
+1<=length of any string <=20 
+
+Sample Input
+
+4
+aba
+baba
+aba
+xzxb
+3
+aba
+xzxb
+ab
+
+Sample Output
+
+2
+1
+0
+
+Explanation
+
+Here, “aba” occurs twice, in the first and third string. The string “xzxb” occurs once in the fourth string, and “ab” does not occur at all.
+
+Solution:
+#This solution is per the requirements of Hackerrank Question.
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the matchingStrings function below.
+def matchingStrings(strings, queries):
+    count = []
+    for i in range(len(queries)):
+        count.append(strings.count(queries[i]))
+    
+    return count
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    strings_count = int(input())
+
+    strings = []
+
+    for _ in range(strings_count):
+        strings_item = input()
+        strings.append(strings_item)
+
+    queries_count = int(input())
+
+    queries = []
+
+    for _ in range(queries_count):
+        queries_item = input()
+        queries.append(queries_item)
+
+    res = matchingStrings(strings, queries)
+
+    fptr.write('\n'.join(map(str, res)))
+    fptr.write('\n')
+
+    fptr.close()
+
+
