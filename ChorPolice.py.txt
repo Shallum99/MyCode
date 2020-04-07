@@ -1,0 +1,87 @@
+import random
+while True:
+    chits = ["Police","Thief","King","Queen"]
+    points = 0
+    print("Press 1 to start")
+    n = int(input())
+    p1 = ''
+    p2 = ''
+    p3 = ''
+    p4 = ''
+    check = {}
+    if n==1:
+     p1 = random.choice(chits)
+     print("You are",p1)
+     chits.remove(p1)
+     p2 = random.choice(chits)
+     chits.remove(p2)
+     p3 = random.choice(chits)
+     chits.remove(p3)
+     p4 = random.choice(chits)
+
+     check.setdefault(p1,1)
+     check.setdefault(p2,2)
+     check.setdefault(p3,3)
+     check.setdefault(p4,4)
+     # check.values(p2)
+     # check.values(p3)
+     # check.values(p4)
+     # check.append(p3)
+     # check.append(p4)
+     # check.append(p1)
+
+     if p1=="Police":
+         print("Guess who's the thief")
+         print("if player2,press 2")
+         print("if player3,press 3")
+         print("if player4,press 4")
+         print("**Only one  guess**")
+         gu = int(input())
+         chor = check.get("Thief")
+         if gu == chor:
+             print("You won!")
+             points+=1
+             print("Points:", points)
+         else:
+            print("Loser!huh")
+            print("Points:", points)
+     if p1 == "King":
+             print("Guess who's the Queen")
+             print("if player2,press 2")
+             print("if player3,press 3")
+             print("if player4,press 4")
+             print("**Only one guess**")
+             gu = int(input())
+             queen = check.get("Queen")
+             if gu == queen:
+                 print("You won!")
+                 points+=1
+                 print("Points:", points)
+             else:
+                 print("Loser!huh")
+                 print("Points:", points)
+     if p1 == "Queen":
+         print("Guess who's the King")
+         print("if player2,press 2")
+         print("if player3,press 3")
+         print("if player4,press 4")
+         print("**Only one guess**")
+         gu = int(input())
+         king = check.get("King")
+         if gu == king:
+             print("You won!")
+             points+=1
+             print("Points:", points)
+         else:
+             print("Loser!huh")
+             print("Points:",points)
+     if p1 == "Thief":
+         print("Press 5 to surrender! You Lose")
+         su = int(input())
+         if su == 5:
+             print("Oh bhai Maro Muje!!:(")
+             points-=points
+             print(points+"Point haha noobie")
+
+
+# Have Fun bois n gals :)
