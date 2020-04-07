@@ -81,7 +81,7 @@ while True:
          if su == 5:
              print("Oh bhai Maro Muje!!:(")
              points-=points
-             print(points+"Point haha noobie")
+             print(points,"Point haha noobie")
 
 
 # Have Fun bois n gals :)
