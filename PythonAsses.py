@@ -7,4 +7,4 @@
 # dOgS RuN
 
 
-print(*(reversed([i.swapcase() for i in "doGs Run".split()])))
+print(*(reversed([i.swapcase() for i in input().split()])))
