@@ -7,8 +7,5 @@
 # dOgS RuN
 
 
-ok = input().split()
-li = []
-for i in ok:
-    li.append(i.swapcase())
+li = [i.swapcase() for i in input().split()]
 print(*li[::-1])
